@@ -1,6 +1,8 @@
 using renovering.Models;
 using renovering.Services;
 
+//https://jasonwatmore.com/post/2022/09/05/net-6-connect-to-sqlite-database-with-entity-framework-core
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

@@ -13,10 +13,15 @@ public class ModelContext : DbContext
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
-        dbPath = System.IO.Path.Join(path, "renovering.db");
+        dbPath = System.IO.Path.Join("C:\\temp\\", "renovering.db");
     }
 
      protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={dbPath}");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+    }
 
 }
