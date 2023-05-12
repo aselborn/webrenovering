@@ -1,0 +1,37 @@
+@model User
+@{
+    ViewData["Title"] = "Registera ny användare";
+}
+
+
+
+<div class="container-section">
+    
+        @using (Html.BeginForm("Register", "Register", FormMethod.Post))
+        {
+            <fieldset class="form-group">
+                <legend class="border-bottom mb4">Registrera konto</legend>
+
+                <div class="form-group">
+                    <!--Invalid användare-->
+                </div>
+                <div class="form-group mb-2">
+                    @Html.LabelFor(m=>m.UserName, new {@class="form-control-label"})
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(m=>m.UserName, new {@class="form-control-label"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m=>m.Email, new {@class="form-control-label"})
+                </div>
+                <div class="form-group">
+                        @Html.TextBoxFor(m=>m.Email, new {@class="form-control-label"})
+                </div>
+            </fieldset>
+
+            <input id = "Submit" type = "submit" value = "submit" />
+        }
+        
+        
+    
+</div>

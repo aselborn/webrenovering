@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 // Add dbContext .
-builder.Services.AddDbContext<ModelContext>(); 
+builder.Services.AddDbContext<RenoveringContext>(); 
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserService, UserService>();
